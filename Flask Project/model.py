@@ -1,86 +1,65 @@
-# import pandas as pd
-# import numpy as np
-# from pickle import load
-# from sklearn.preprocessing import LabelEncoder
-
-# # Load encoder, scaler, and model
-# encoder = load(open('label_encoder.pkl', 'rb'))
-# model = load(open('model.pkl', 'rb'))
-
-# # Extracting the relevant features from the DataFrame
-# features = ['Age', 'Medu', 'Fedu', 'Mjob', 'Fjob', 'traveltime', 'studytime', 'famrel', 'freetime', 'goout', 'Walc', 'health', 'absences', 'G1', 'G2', 'G3']
-
-# # Creating an empty dictionary to store user input
-# user_input = {}
-
-# # Take input from the user for each feature
-# for feature in features:
-#     user_input[feature] = float(input("Enter {}: ".format(feature)))  # Convert input to float
-
-# # Creating a DataFrame with the user input
-# user_df = pd.DataFrame([user_input])
-
-# # Calculating 'avg_grade' based on 'G1', 'G2', and 'G3'
-# user_df['avg_grade'] = user_df[['G1', 'G2', 'G3']].mean(axis=1)
-
-# # Display the user input DataFrame
-# print("\nUser Input:")
-# print(user_df)
-
-# # Label encoding for categorical columns
-# categorical_columns = ['Mjob', 'Fjob']
-
-# label_encoder = LabelEncoder()
-# for column in categorical_columns:
-#     user_df[column] = label_encoder.fit_transform(user_df[column])
-
-
-
-# # Display the preprocessed user input DataFrame
-# print("\nPreprocessed User Input:")
-# print(user_df)
-
-
-
-
+import numpy as np
 import pandas as pd
-from pickle import load
+from sklearn.model_selection import train_test_split as tts
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.metrics import r2_score, mean_squared_error
 from sklearn.preprocessing import LabelEncoder
+from pickle import dump
 
-# Load encoder, scaler, and model
-encoder = load(open('label_encoder.pkl', 'rb'))
-model = load(open('model.pkl', 'rb'))
+df = pd.read_csv("Student Info.csv")
 
-# Extracting the relevant features from the DataFrame
-features = ['Age', 'Medu', 'Fedu', 'Mjob', 'Fjob', 'traveltime', 'studytime', 'famrel', 'freetime', 'goout', 'Walc', 'health', 'absences', 'G1', 'G2', 'G3']
+class MultiColumnLabelEncoder:
 
-# Creating an empty dictionary to store user input
-user_input = {}
+    def __init__(self, columns=None):
+        self.columns = columns
 
-# Take input from the user for each feature
-for feature in features:
-    if feature in ['Mjob', 'Fjob']:
-        user_input[feature] = input("Enter {}: ".format(feature))
-    else:
-        user_input[feature] = float(input("Enter {}: ".format(feature)))  # Convert input to float for numerical features
+    def fit(self, X, y=None):
+        self.encoders = {}
+        columns = X.columns if self.columns is None else self.columns
+        for col in columns:
+            self.encoders[col] = LabelEncoder().fit(X[col])
+        return self
 
-# Creating a DataFrame with the user input
-user_df = pd.DataFrame([user_input])
+    def transform(self, X):
+        output = X.copy()
+        columns = X.columns if self.columns is None else self.columns
+        for col in columns:
+            output[col] = self.encoders[col].transform(X[col])
+        return output
 
-# Calculating 'avg_grade' based on 'G1', 'G2', and 'G3'
-user_df['avg_grade'] = user_df[['G1', 'G2', 'G3']].mean(axis=1)
+    def fit_transform(self, X, y=None):
+        return self.fit(X, y).transform(X)
 
-# Display the user input DataFrame
-print("\nUser Input:")
-print(user_df)
+    def inverse_transform(self, X):
+        output = X.copy()
+        columns = X.columns if self.columns is None else self.columns
+        for col in columns:
+            output[col] = self.encoders[col].inverse_transform(X[col])
+        return output
 
-# Label encoding for categorical columns
-categorical_columns = ['Mjob', 'Fjob']
+cat_features = [feature for feature in df.columns if df[feature].dtype in ['object', 'bool_']]
+multi = MultiColumnLabelEncoder(columns=cat_features)
+df = multi.fit_transform(df)
 
-label_encoder = LabelEncoder()
-for column in categorical_columns:
-    user_df[column] = label_encoder.fit_transform(user_df[column])
+dump(multi, open('label_encoder.pkl', 'wb'))
 
-# Display the preprocessed user input DataFrame
-print("\nPreprocessed User Input:")
-print(user_df)
+X = df[['age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu', 'Mjob', 'Fjob',
+        'reason', 'guardian', 'traveltime', 'studytime', 'failures', 'schoolsup',
+        'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic',
+        'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2']]
+Y = df[['G3']]
+
+X_train, X_test, y_train, y_test = tts(X, Y, test_size=0.2, random_state=49)
+
+model = GradientBoostingRegressor()
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print("GradientBoostingRegressor")
+print("rmse: ", np.sqrt(mse))
+print("r2 score: ", r2)
+
+dump(model, open('model.pkl', 'wb'))
