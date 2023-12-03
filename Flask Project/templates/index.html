@@ -228,16 +228,28 @@
                 <label for="inputfamsize" class="form-label">Family size:</label>
                 <input type="number" class="form-control" id="inputFamsize" name="user_famsize" required>
             </div>
-
-            <div class="mb-3">
-                <label for="inputReason" class="form-label">Reason for attending chosen school:</label>
-                <input type="number" class="form-control" id="inputReason" name="user_reason" required>
+            Reason for attending chosen school:
+            <div class="input-group">
+                <select class="form-control" id="inputReason" name="user_reason" aria-label="Example select with button addon">
+                  <option selected>Choose...</option>
+                  <option value="1">Close to home</option>
+                  <option value="2">School Reputaion</option>
+                  <option value="2">Courses Offered</option>
+                  <option value="2">Other</option>
+                </select>
             </div>
-
-            <div class="mb-3">
-                <label for="inputHigher" class="form-label">Higher education interest:</label>
-                <input type="number" class="form-control" id="inputHigher" name="user_higher" required>
+            <br>
+            <br>
+            Higher education interest:
+            <div class="input-group">
+                <select class="form-control" id="inputHigher" name="user_higher" aria-label="Example select with button addon">
+                  <option selected>Choose...</option>
+                  <option value="1">Yes</option>
+                  <option value="2">No</option>
+                </select>
             </div>
+            <br>
+            <br>
 
             <div class="mb-3">
                 <label for="inputAbsences" class="form-label">Absences:</label>
