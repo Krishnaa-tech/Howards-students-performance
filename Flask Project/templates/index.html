@@ -15,12 +15,12 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            color: #ffffff;
+            color: black;
             padding: 20px;
         }
 
         .container {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color:aqua;
             padding: 20px;
             border-radius: 10px;
         }
@@ -41,6 +41,7 @@
 </head>
 
 <body>
+    <h1>Student Performance Predictor</h1>
     <div class="container mt-4">
         <form method="POST" action="/predict">
 
@@ -51,100 +52,161 @@
 
             <div class="mb-3">
                 <label for="inputAddress" class="form-label">Address:</label>
-                <input type="number" class="form-control" id="inputAddress" name="user_address" required>
+                <input type="text" class="form-control" id="inputAddress" name="user_address" required>
+            </div>
+
+            Mother's Job
+            <div class="input-group">
+                <select class="form-control" id="inputAddress" name="user_mjob" aria-label="Example select with button addon">
+                  <option selected>Choose...</option>
+                  <option value="1">Teacher</option>
+                  <option value="2">At_home</option>
+                  <option value="3">Health</option>
+                  <option value="3">Other</option>
+                </select>
+                <input type="text" class="form-control" id="inputAddress" name="user_address" required>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            Father's Job
+            <div class="input-group">
+                <select class="form-control" id="inputAddress" name="user_fjob" aria-label="Example select with button addon">
+                  <option selected>Choose...</option>
+                  <option value="1">Teacher</option>
+                  <option value="2">At_home</option>
+                  <option value="3">Health</option>
+                  <option value="3">Other</option>
+                </select>
+                <input type="text" class="form-control" id="inputAddress" name="user_address" required>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            Mother's Education
+            <div class="input-group">
+                <select class="form-control" id="inputAddress" name="user_medu" aria-label="Example select with button addon"  required>
+                  <option selected>Choose...</option>
+                  <option value="1">none</option>
+                  <option value="2">primary education (4th grade)</option>
+                  <option value="3">Health</option>
+                  <option value="3">5th to 9th grade</option>
+                  <option value="3">secondary education</option>
+                  <option value="3">higher education</option>
+                </select>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            Father's Education
+            <div class="input-group">
+                <select class="form-control" id="inputAddress" name="user_fedu" aria-label="Example select with button addon"  required>
+                  <option selected>Choose...</option>
+                  <option value="1">none</option>
+                  <option value="2">primary education (4th grade)</option>
+                  <option value="3">Health</option>
+                  <option value="3">5th to 9th grade</option>
+                  <option value="3">secondary education</option>
+                  <option value="3">higher education</option>
+                </select>
             </div>
 
             <div class="mb-3">
-                <label for="inputFjob" class="form-label">Fjob:</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id="inputFjob" name="user_Fjob" required readonly>
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Dropdown</button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Teacher</a></li>
-                        <li><a class="dropdown-item" href="#">Services</a></li>
-                        <li><a class="dropdown-item" href="#">At_home</a></li>
-                        <li><a class="dropdown-item" href="#">Health</a></li>
-                        <li><a class="dropdown-item" href="#">Other</a></li>
-                    </ul>
-                </div>
+                <label for="inputTraveltime" class="form-label">Traveltime:</label>
+                <input type="text" class="form-control" id="inputTraveltime" name="user_traveltime" required>
             </div>
 
             <div class="mb-3">
-                <label for="inputMedu" class="form-label">Medu:</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id="inputMedu" name="user_Medu" required readonly>
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Dropdown</button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">none</a></li>
-                        <li><a class="dropdown-item" href="#">primary education (4th grade)</a></li>
-                        <li><a class="dropdown-item" href="#">5th to 9th grade</a></li>
-                        <li><a class="dropdown-item" href="#">secondary education</a></li>
-                        <li><a class="dropdown-item" href="#">higher education</a></li>
-                    </ul>
-                </div>
+                <label for="inputFailure" class="form-label">Failure:</label>
+                <input type="text" class="form-control" id="inputFailure" name="user_failure" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputTSchoolsup" class="form-label">Schoolsup:</label>
+                <input type="text" class="form-control" id="inputSchoolsup" name="user_schoolsup" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputFamsup" class="form-label">Famsup:</label>
+                <input type="text" class="form-control" id="inputFamsup" name="user_famsup" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputPaid" class="form-label">Paid:</label>
+                <input type="text" class="form-control" id="inputPaid" name="user_paid" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="inputActivities" class="form-label">Activities:</label>
+                <input type="text" class="form-control" id="inputActivities" name="user_activities" required>
             </div>
 
             <!-- Input field for user's email -->
             <div class="mb-3">
-                <label for="inputTraveltime" class="form-label">Traveltime:</label>
-                <input type="number" class="form-control" id="inputTraveltime" name="user_traveltime" required>
+                <label for="inputInternet" class="form-label">Internet:</label>
+                <input type="text" class="form-control" id="inputInternet" name="user_internet" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="inputRomantic" class="form-label">Romantic:</label>
+                <input type="text" class="form-control" id="inputRomantic" name="user_romantic" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="inputGuardin" class="form-label">Guardian:</label>
+                <input type="text" class="form-control" id="inputGuardin" name="user_guardin" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputStudytime" class="form-label">Studytime:</label>
-                <input type="number" class="form-control" id="inputStudytime" name="user_studytime" required>
+                <input type="text" class="form-control" id="inputStudytime" name="user_studytime" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputFreetime" class="form-label">Freetime:</label>
-                <input type="number" class="form-control" id="inputFreetime" name="user_freetime" required>
+                <input type="text" class="form-control" id="inputFreetime" name="user_freetime" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputGoout" class="form-label">Goout:</label>
-                <input type="number" class="form-control" id="inputGoout" name="user_goout" required>
+                <input type="text" class="form-control" id="inputGoout" name="user_goout" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputWalc" class="form-label">Dalc:</label>
-                <input type="number" class="form-control" id="inputWalc" name="user_walc" required>
+                <input type="text" class="form-control" id="inputWalc" name="user_walc" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputfamsize" class="form-label">Famsize:</label>
-                <input type="number" class="form-control" id="inputFamsize" name="user_famsize" required>
+                <input type="text" class="form-control" id="inputFamsize" name="user_famsize" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputReason" class="form-label">Reason:</label>
-                <input type="number" class="form-control" id="inputReason" name="user_reason" required>
+                <input type="text" class="form-control" id="inputReason" name="user_reason" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputHigher" class="form-label">Higher:</label>
-                <input type="number" class="form-control" id="inputHigher" name="user_higher" required>
+                <input type="text" class="form-control" id="inputHigher" name="user_higher" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputAbsences" class="form-label">Absences:</label>
-                <input type="number" class="form-control" id="inputAbsences" name="user_absences" required>
+                <input type="text" class="form-control" id="inputAbsences" name="user_absences" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputG1" class="form-label">G1:</label>
-                <input type="number" class="form-control" id="inputG1" name="user_g1" required>
+                <input type="text" class="form-control" id="inputG1" name="user_g1" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputG2" class="form-label">G2:</label>
-                <input type="number" class="form-control" id="inputG2" name="user_g2" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="inputG3" class="form-label">G3:</label>
-                <input type="number" class="form-control" id="inputG3" name="user_g3" required>
+                <input type="text" class="form-control" id="inputG2" name="user_g2" required>
             </div>
 
             <!-- Submit button -->
