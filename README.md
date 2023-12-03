@@ -17,9 +17,9 @@ The goal of this project is to come up with a model(s) that can help us understa
 It’s not necessary that all the variables are relevant for prediction. The idea is to figure out and focus on the important factors that can affect the student’s performance. 
 
 <div align="center" id="top">
-  <img src="Flask Project/static/img/img1.jpeg" width="900" alt="Profile Readme Generator" />
+  <img src="Flask Project/static/img/img1.png" width="900" alt="Profile Readme Generator" />
   
-  <img src="Flask Project/static/img/img2.jpeg" width="900" alt="Profile Readme Generator" />
+  <img src="Flask Project/static/img/img2.png" width="900" alt="Profile Readme Generator" />
 </div>
 
 <div align="center" id="top">
