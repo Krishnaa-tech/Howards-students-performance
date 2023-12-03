@@ -223,11 +223,16 @@
                 <label for="inputWalc" class="form-label">Weekday alcohol consumption:</label>
                 <input type="number" class="form-control" id="inputWalc" name="user_walc" required>
             </div>
-
-            <div class="mb-3">
-                <label for="inputfamsize" class="form-label">Family size:</label>
-                <input type="number" class="form-control" id="inputFamsize" name="user_famsize" required>
+            Family size:
+            <<div class="input-group">
+                <select class="form-control" id="inputFamsize" name="user_famsize" aria-label="Example select with button addon">
+                  <option selected>Choose...</option>
+                  <option value="1">Greater Than 3</option>
+                  <option value="2">Lesser Than  or Equal to 3</option>
+                </select>
             </div>
+            <br>
+            <br>
             Reason for attending chosen school:
             <div class="input-group">
                 <select class="form-control" id="inputReason" name="user_reason" aria-label="Example select with button addon">
