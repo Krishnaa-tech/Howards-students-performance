@@ -12,7 +12,7 @@ model = load(open('model.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
-@app.route('/process_form', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     # Get the data from the POST request.
     input_data = {
