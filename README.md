@@ -13,6 +13,7 @@
 ## About ##
 
 The goal of this project is to come up with a model(s) that can help us understand the performance of a student based on some attributes, such as the student’s family size, alcohol consumption habits, study timings, number of failures, etc. The dataset provided contains 33 variables that could determine the students’ performance and the quality of education provided (assuming that the grades received by the students represent the quality of education provided). 
+
 It’s not necessary that all the variables are relevant for prediction. The idea is to figure out and focus on the important factors that can affect the student’s performance. 
 
 <div align="center" id="top">
