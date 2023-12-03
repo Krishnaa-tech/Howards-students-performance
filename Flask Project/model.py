@@ -47,6 +47,7 @@ X = df[['age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu', 'Mjob', 'Fjob',
         'reason', 'guardian', 'traveltime', 'studytime', 'failures', 'schoolsup',
         'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic',
         'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2']]
+
 Y = df[['G3']]
 
 X_train, X_test, y_train, y_test = tts(X, Y, test_size=0.2, random_state=49)
