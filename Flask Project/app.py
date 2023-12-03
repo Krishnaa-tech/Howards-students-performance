@@ -49,7 +49,7 @@ def predict():
     }
 
     # Convert categorical variables using the label encoder
-    input_data_encoded = label_encoder.transform(pd.DataFrame(input_data, index=[0]))
+    input_data_encoded = label_encoder.fit_transform(pd.DataFrame(input_data, index=[0])).reshape(-1)
 
     # Make predictions using the model
     prediction = model.predict(input_data_encoded)
