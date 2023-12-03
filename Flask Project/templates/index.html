@@ -52,25 +52,23 @@
 
             Address
             <div class="input-group">
-                <select class="form-control" id="inputAddress" name="user_mjob" aria-label="Example select with button addon">
+                <select class="form-control" id="inputAddress" name="user_address" aria-label="Example select with button addon">
                   <option selected>Choose...</option>
                   <option value="1">R</option>
                   <option value="2">U</option>
                 </select>
-                <input type="text" class="form-control" id="inputAddress" name="user_address" required>
             </div>
             <br>
             <br>
             Mother's Job
             <div class="input-group">
-                <select class="form-control" id="inputAddress" name="user_mjob" aria-label="Example select with button addon">
+                <select class="form-control" id="inputMjob" name="user_mjob" aria-label="Example select with button addon">
                   <option selected>Choose...</option>
                   <option value="1">Teacher</option>
                   <option value="2">At_home</option>
                   <option value="3">Health</option>
                   <option value="3">Other</option>
                 </select>
-                <input type="text" class="form-control" id="inputAddress" name="user_address" required>
             </div>
 
             <br>
@@ -78,14 +76,13 @@
 
             Father's Job
             <div class="input-group">
-                <select class="form-control" id="inputAddress" name="user_fjob" aria-label="Example select with button addon">
+                <select class="form-control" id="inputFjob" name="user_fjob" aria-label="Example select with button addon">
                   <option selected>Choose...</option>
                   <option value="1">Teacher</option>
                   <option value="2">At_home</option>
                   <option value="3">Health</option>
                   <option value="3">Other</option>
                 </select>
-                <input type="text" class="form-control" id="inputAddress" name="user_address" required>
             </div>
 
             <br>
@@ -93,7 +90,7 @@
 
             Mother's Education
             <div class="input-group">
-                <select class="form-control" id="inputAddress" name="user_medu" aria-label="Example select with button addon"  required>
+                <select class="form-control" id="inputMedu" name="user_medu" aria-label="Example select with button addon"  required>
                   <option selected>Choose...</option>
                   <option value="1">none</option>
                   <option value="2">primary education (4th grade)</option>
@@ -110,7 +107,7 @@
 
             Father's Education
             <div class="input-group">
-                <select class="form-control" id="inputAddress" name="user_fedu" aria-label="Example select with button addon"  required>
+                <select class="form-control" id="inputFedu" name="user_fedu" aria-label="Example select with button addon"  required>
                   <option selected>Choose...</option>
                   <option value="1">none</option>
                   <option value="2">primary education (4th grade)</option>
@@ -130,22 +127,33 @@
                 <label for="inputFailure" class="form-label">Failure:</label>
                 <input type="text" class="form-control" id="inputFailure" name="user_failure" required>
             </div>
-            <div class="mb-3">
-                <label for="inputTSchoolsup" class="form-label">Schoolsup:</label>
-                <input type="text" class="form-control" id="inputSchoolsup" name="user_schoolsup" required>
-            </div>
-            <div class="mb-3">
-                <label for="inputFamsup" class="form-label">Famsup:</label>
-                <input type="text" class="form-control" id="inputFamsup" name="user_famsup" required>
-            </div>
-            Extra Paid Tuition 
+            School supply paid for:
             <div class="input-group">
-                <select class="form-control" id="inputAddress" name="user_mjob" aria-label="Example select with button addon">
+                <select class="form-control" id="inputSchoolsup" name="user_schoolsup" aria-label="Example select with button addon">
                   <option selected>Choose...</option>
                   <option value="1">Yes</option>
                   <option value="2">No</option>
                 </select>
-                <input type="text" class="form-control" id="inputPaid" name="user_paid" required>
+            </div>
+            <br>
+            <br>
+            Family supply paid for:
+            <div class="input-group">
+                <select class="form-control" id="inputFamsup" name="user_famsup" aria-label="Example select with button addon">
+                  <option selected>Choose...</option>
+                  <option value="1">Yes</option>
+                  <option value="2">No</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            Extra Paid Tuition 
+            <div class="input-group">
+                <select class="form-control" id="inputPaid" name="user_paid" aria-label="Example select with button addon">
+                  <option selected>Choose...</option>
+                  <option value="1">Yes</option>
+                  <option value="2">No</option>
+                </select>
             </div>
             <br>
             <br>
@@ -158,18 +166,17 @@
             <!-- Input field for user's email -->
             Internet
             <div class="input-group">
-                <select class="form-control" id="inputAddress" name="user_mjob" aria-label="Example select with button addon">
+                <select class="form-control" id="inputInternet" name="uuser_internet" aria-label="Example select with button addon">
                   <option selected>Choose...</option>
                   <option value="1">Yes</option>
                   <option value="2">No</option>
                 </select>
-                <input type="text" class="form-control" id="inputInternet" name="user_internet" required>
             </div>
             <br>
             <br>
             Extra Paid Tuition 
             <div class="input-group">
-                <select class="form-control" id="inputAddress" name="user_mjob" aria-label="Example select with button addon">
+                <select class="form-control" id="inputRomantic" name="user_romantic" aria-label="Example select with button addon">
                   <option selected>Choose...</option>
                   <option value="1">Yes</option>
                   <option value="2">No</option>
@@ -181,13 +188,12 @@
 
             Guardian
             <div class="input-group">
-                <select class="form-control" id="inputAddress" name="user_mjob" aria-label="Example select with button addon">
+                <select class="form-control" id="inputGuardian" name="user_guardian" aria-label="Example select with button addon">
                   <option selected>Choose...</option>
                   <option value="1">Mother</option>
                   <option value="2">Father</option>
                   <option value="2">Other</option>
                 </select>
-                <input type="text" class="form-control" id="inputGuardian" name="user_guardian" required>
             </div>
             <br>
             <br>
