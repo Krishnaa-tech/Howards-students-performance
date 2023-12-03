@@ -122,12 +122,12 @@
 
             <div class="mb-3">
                 <label for="inputTraveltime" class="form-label">Traveltime:</label>
-                <input type="text" class="form-control" id="inputTraveltime" name="user_traveltime" required>
+                <input type="number" class="form-control" id="inputTraveltime" name="user_traveltime" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputFailure" class="form-label">Failure:</label>
-                <input type="text" class="form-control" id="inputFailure" name="user_failure" required>
+                <input type="number" class="form-control" id="inputFailure" name="user_failure" required>
             </div>
             School supply paid for:
             <div class="input-group">
@@ -159,11 +159,16 @@
             </div>
             <br>
             <br>
-
-            <div class="mb-3">
-                <label for="inputActivities" class="form-label">Activities:</label>
-                <input type="text" class="form-control" id="inputActivities" name="user_activities" required>
+            Activities
+            <div class="input-group">
+                <select class="form-control" id="inputActivities" name="user_activities" aria-label="Example select with button addon">
+                  <option selected>Choose...</option>
+                  <option value="1">Yes</option>
+                  <option value="2">No</option>
+                </select>
             </div>
+            <br>
+            <br>
 
             <!-- Input field for user's email -->
             Internet
@@ -201,52 +206,52 @@
 
             <div class="mb-3">
                 <label for="inputStudytime" class="form-label">Studytime:</label>
-                <input type="text" class="form-control" id="inputStudytime" name="user_studytime" required>
+                <input type="number" class="form-control" id="inputStudytime" name="user_studytime" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputFreetime" class="form-label">Freetime:</label>
-                <input type="text" class="form-control" id="inputFreetime" name="user_freetime" required>
+                <input type="number" class="form-control" id="inputFreetime" name="user_freetime" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputGoout" class="form-label">Time spent Outside with friends:</label>
-                <input type="text" class="form-control" id="inputGoout" name="user_goout" required>
+                <input type="number" class="form-control" id="inputGoout" name="user_goout" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputWalc" class="form-label">Weekday alcohol consumption:</label>
-                <input type="text" class="form-control" id="inputWalc" name="user_walc" required>
+                <input type="number" class="form-control" id="inputWalc" name="user_walc" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputfamsize" class="form-label">Family size:</label>
-                <input type="text" class="form-control" id="inputFamsize" name="user_famsize" required>
+                <input type="number" class="form-control" id="inputFamsize" name="user_famsize" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputReason" class="form-label">Reason for attending chosen school:</label>
-                <input type="text" class="form-control" id="inputReason" name="user_reason" required>
+                <input type="number" class="form-control" id="inputReason" name="user_reason" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputHigher" class="form-label">Higher education interest:</label>
-                <input type="text" class="form-control" id="inputHigher" name="user_higher" required>
+                <input type="number" class="form-control" id="inputHigher" name="user_higher" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputAbsences" class="form-label">Absences:</label>
-                <input type="text" class="form-control" id="inputAbsences" name="user_absences" required>
+                <input type="number" class="form-control" id="inputAbsences" name="user_absences" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputG1" class="form-label">Grade 1:</label>
-                <input type="text" class="form-control" id="inputG1" name="user_g1" required>
+                <input type="number" class="form-control" id="inputG1" name="user_g1" required>
             </div>
 
             <div class="mb-3">
                 <label for="inputG2" class="form-label">Grade 2:</label>
-                <input type="text" class="form-control" id="inputG2" name="user_g2" required>
+                <input type="number" class="form-control" id="inputG2" name="user_g2" required>
             </div>
 
             <!-- Submit button -->
