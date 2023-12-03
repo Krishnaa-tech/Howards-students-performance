@@ -49,12 +49,16 @@ def predict():
     }
 
     # Convert categorical variables using the label encoder
-    input_data_encoded = label_encoder.fit_transform(pd.DataFrame(input_data, index=[0])).reshape(-1)
+    input_data_encoded = label_encoder.fit_transform(pd.DataFrame({'A': input_data}))
+
+
+    # Assuming 'input_data_encoded' is a 1D array
+    input_data_encoded = input_data_encoded.reshape(1, -1)
 
     # Make predictions using the model
     prediction = model.predict(input_data_encoded)
 
-    return render_template('index.html', prediction_text='Predicted G3: {}'.format(prediction[0]))
+    return render_template('result.html', prediction=prediction*5)
 
 if __name__ == '__main__':
     app.run(debug=True)
