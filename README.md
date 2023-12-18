@@ -40,10 +40,10 @@ It’s not necessary that all the variables are relevant for prediction. The ide
   <img src="Flask Project/static/img/dashboard.png" width="900" alt="Profile Readme Generator"/>
 </div>
 
-<h4 align = "center"> Contributors </h2>
+<h4 align="center"> Contributors </h4>
 <p align="center">
-  <a href="https://github.com/krishnaa-tech">Krish Goyal</a> &#xa0; | &#xa0;
-  <a href="https://github.com/Aditya22112303">Aditya Pratap</a> &#xa0; | &#xa0;
-  <a href="https://github.com/narpatk78">Narpat</a> &#xa0; | &#xa0;
-  <a href="https://github.com/Kedhar-K">Kedhar</a> &#xa0; 
+  <a href="https://github.com/krishnaa-tech" style="font-family: Georgia, serif; font-style: italic;">Krish Goyal</a> &#xa0; | &#xa0;
+  <a href="https://github.com/Aditya22112303" style="font-family: Georgia, serif; font-style: italic;">Aditya Pratap</a> &#xa0; | &#xa0;
+  <a href="https://github.com/narpatk78" style="font-family: Georgia, serif; font-style: italic;">Narpat</a> &#xa0; | &#xa0;
+  <a href="https://github.com/Kedhar-K" style="font-family: Georgia, serif; font-style: italic;">Kedhar</a> &#xa0; 
 </p>
