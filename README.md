@@ -1,3 +1,16 @@
+[![GitHub license](https://img.shields.io/github/license/Krishnaa-tech/Howards-students-performance)](https://github.com/Krishnaa-tech/Howards-students-performance/blob/main/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/Krishnaa-tech/Howards-students-performance.svg)](https://GitHub.com/Krishnaa-tech/Howards-students-performance/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/Krishnaa-tech/Howards-students-performance.svg)](https://GitHub.com/Krishnaa-tech/Howards-students-performance/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/Krishnaa-tech/Howards-students-performance.svg)](https://GitHub.com/Krishnaa-tech/Howards-students-performance/pulls/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![GitHub watchers](https://img.shields.io/github/watchers/Krishnaa-tech/Howards-students-performance.svg?style=social&label=Watch)](https://GitHub.com/Krishnaa-tech/Howards-students-performance/watchers/)
+[![GitHub forks](https://img.shields.io/github/forks/Krishnaa-tech/Howards-students-performance.svg?style=social&label=Fork)](https://GitHub.com/Krishnaa-tech/Howards-students-performance/network/)
+[![GitHub stars](https://img.shields.io/github/stars/Krishnaa-tech/Howards-students-performance.svg?style=social&label=Star)](https://GitHub.com/Krishnaa-tech/Howards-students-performance/stargazers/)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Krishnaa-tech/Howards-students-performance/HEAD)
+[![Gitter](https://badges.gitter.im/Krishnaa-tech/Howards-students-performance.svg)](https://gitter.im/Krishnaa-tech/Howards-students-performance?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-blue.svg) 
+![Python 3.11.6](https://img.shields.io/badge/Python-3.11-brightgreen.svg) ![scikit-learnn](https://img.shields.io/badge/Library-Scikit_Learn-orange.svg)
+
 <div align="center">
   <h1>Student Performance Prediction</h1>
   <h3>The Best Student Performance Prediction for a given set of Student Details!</h3>
