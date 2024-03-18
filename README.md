@@ -19,7 +19,7 @@
   <a href="/Documendation">Documentation</a> &#xa0; | &#xa0;
   <a href="/Flask Project">Flask Project</a> &#xa0; | &#xa0;
   <a href="/Notebook">Jupyter Notebook</a> &#xa0; | &#xa0;
-  <a href="Documentation/dashboard.png">Power-BI Dashboard</a> &#xa0; | &#xa0;
+  <a href="/Documentation/dashboard.png">Power-BI Dashboard</a> &#xa0; | &#xa0;
 </p>
 
 ## About ##
