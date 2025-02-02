@@ -41,7 +41,7 @@ It’s not necessary that all the variables are relevant for prediction. The ide
 
 <div align="center" id="top">
   <h2> **Winner Certificate** </h2>
-  <img src="Flask Project/static/img/dashboard.png" width="900" alt="Profile Readme Generator"/>
+  <img src="Documendation/Hackverse24-Winner-1.png" width="900" alt="Profile Readme Generator"/>
 </div>
 
 <h4 align="center"> Contributors </h4>
