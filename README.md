@@ -39,6 +39,11 @@ It’s not necessary that all the variables are relevant for prediction. The ide
   <img src="Flask Project/static/img/dashboard.png" width="900" alt="Profile Readme Generator"/>
 </div>
 
+<div align="center" id="top">
+  <h2> **Winner Certificate** </h2>
+  <img src="Flask Project/static/img/dashboard.png" width="900" alt="Profile Readme Generator"/>
+</div>
+
 <h4 align="center"> Contributors </h4>
 <p align="center">
   <a href="https://github.com/krishnaa-tech" style="font-family: Georgia, serif; font-style: italic;">Krish Goyal</a> &#xa0; | &#xa0;
